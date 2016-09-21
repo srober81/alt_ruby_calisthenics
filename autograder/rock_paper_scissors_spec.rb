@@ -1,6 +1,5 @@
 require 'rock_paper_scissors'
 require 'byebug'
-
 describe RockPaperScissors do
   before(:each) do
     @rock = ['Armando','R'] ; @paper = ['Dave','P'] ; @scissors = ['Sam','S']

@@ -1,6 +1,7 @@
 require 'attr_accessor_with_history'
 require 'byebug'
 
+
 class TestClass1
   attr_accessor_with_history :foo
 end

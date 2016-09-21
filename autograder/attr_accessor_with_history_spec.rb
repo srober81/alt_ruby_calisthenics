@@ -1,3 +1,6 @@
+require 'attr_accessor_with_history'
+require 'byebug'
+
 class TestClass1
   attr_accessor_with_history :foo
 end
@@ -17,7 +20,7 @@ describe '#attr_accessor_with_history' do
     it 'should work if getter used first [10 points]', points: 10 do
       @subject.foo_history.should be_nil
     end
-    it 'should work if setter used first [20 points]' , points: 20 do
+    it 'should work if setter used first [20 points]', points: 20 do
       @subject.foo = 'x'
       @subject.foo = 'y'
       @subject.foo_history.should == [nil, 'x']
@@ -33,7 +36,7 @@ describe '#attr_accessor_with_history' do
     before(:each) { @subject = TestClass1.new }
     include_examples 'all cases'
   end
-  describe 'when a string is passed [10 points]' , points: 10 do
+  describe 'when a string is passed [10 points]', points: 10 do
     before(:each) { @subject = TestClass2.new }
     include_examples 'all cases'
   end

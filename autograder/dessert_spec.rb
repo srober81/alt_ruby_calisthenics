@@ -1,3 +1,6 @@
+require 'dessert'
+require 'byebug'
+
 describe Dessert do
   describe 'cake' do
     before :each do
